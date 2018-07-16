@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28.06.2018, 17:04:59
+    Author     : Niklas
+*/
+
+body {
+    margin: 0px;
+}
+/*CLASSES*/
+.wrapper {
+    display: grid;
+    grid-template-columns: [col]1fr [col]1fr [col]1fr [clo]1fr;
+    grid-gap: 10px;
+    background-color: #fff;
+    color: #444;
+    height: 47em;
+}
+
+.box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+}
+.loginSubContainer{
+    background-color: #e1dfdf;
+    text-align: center;
+    border-radius: 5px;
+}
+.calcSubContainer{
+    background-color: #e1dfdf;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/*ID*/
+#header{
+    margin:0px;
+    widht: 100%;
+    background-color: #7a2121; 
+    height: 5em;
+}
+#login{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-column: 1 / span 4;
+}
+#sale{
+    grid-column: 1 / span 2;
+    grid-row: 2/ span 7;
+}
+#calc{
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 6;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns:1fr 1fr 1fr;
+}
+#change{
+    grid-column: 3 / span 2;
+}
+#logout{
+    grid-column: 1 / span 4; 
+}
