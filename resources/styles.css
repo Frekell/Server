@@ -1,0 +1,9 @@
+body{
+    display: grid; 
+    grid-template-columns: [col]1fr [col]1fr [col]1fr;
+    grid-gap: 3em;
+    background-color: darkslategray;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
