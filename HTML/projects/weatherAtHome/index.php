@@ -20,12 +20,34 @@
         </div>
         <div class="boxData">
             <p>Datenblat Wohnzimmer</p>
-            <?php
-                echo "Aktuelle Temperatur: "
-                echo "Aktuelle Feuchtigkeit: "
-                echo "Durchschnit Temp. Heute: "
-                echo "Durchschnit LF Heute: "
-            ?>
+           <?php
+            $servername = "localhost"; 
+            $username = "frekkel"; 
+            $password = "Essen1997"; 
+            $dbname = "wetterstation"; 
+
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            } 
+            
+            $sql = "SELECT TOP 3 degree, room FROM temp_test WHERE room ='wohnzimmer'" ;
+            $result = $conn->query($sql);
+
+            if ($result->num_rows > 0) {
+                echo "<table><tr><th>Room</th><th>ID</th></tr>";
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr><td>".$row["room"]."</td><td>".$row["degree"]."</td></tr>";
+                }
+                echo "</table>";
+            } else {
+                echo "0 results";
+            }
+            $conn->close();
+
+           ?>
         </div>
         <div class="boxDataChart">
             <p>Diagramm Wohnzimmer</p>
