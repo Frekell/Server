@@ -1,0 +1,41 @@
+body{
+    padding: 5px;
+    margin: 0px;
+    background-color: darkgrey;
+}
+#header{
+    width: 100%;
+    display: block;
+    margin-bottom: 3em;
+    height: 5em !important;
+    text-align: center;
+}
+.block{
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 30em;
+    height: 15em;
+    margin-bottom: 3em;
+    display: grid;
+    grid-template-columns: [col]1fr [col]1fr [col]1fr;
+}
+.boxheader{
+    text-align: center;
+    grid-column: 1 / span 3;
+    border: 1px solid black;
+}
+.boxData{
+    border: 1px solid black;
+    grid-row: 2 / span 4; 
+}
+.boxDataChart{
+    grid-column: 2 / span 2;
+    border: 1px solid black;
+    grid-row: 2 / span 4;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+    flex-wrap: wrap;
+}

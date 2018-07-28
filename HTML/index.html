@@ -1,46 +1,67 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-
 <head>
-    <link href="resources/styles.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="resources/styles.css" />
+    <script src="main.js"></script>
+    <script>
+        
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            m = checkTime(m);
+            h = checkTime(h);
+            document.getElementById("clock").innerHTML = h + ": " + m 
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if(i < 10 ){
+                i = "0"+i
+            }
+            return i; 
+        }
+    </script>
 </head>
+<body onload="startTime()">
+    <div class="block" id="header">
+        <h1>Frekkel.de</h1>
+    </div>
+    <div class="block" id="clock"></div>
+    <div class="wrapper">
+        <div class="listBlock" id="projects">
+            <div class="blockHeader">
 
-<body>
-    <div class="box" id="header">
-        <h1>Wilkommen auf der Landingpage</h1>
-    </div>
-    <div class="box project" id="cashRegister">
-        <a href="projects/kassensystem/index.html">Zum Kassensystem</a>
-    </div>
-    <div class="box project">
-        <a href="#">TempAtHome (Comming Soon)</a>
-    </div>
-    <div class="box project">
-        <a href="#">SmartFridge (Comming Soon)</a>
-    </div>
-    <div class="box stable placeholder">
-
-    </div>
-    <div class="box stable placeholder">
-
-    </div>
-    <div class="box stable placeholder">
-
-    </div>
-    <div class="box placeholder">
-
-    </div>
-    <div class="box placeholder">
-
-    </div>
-    <div class="box placeholder">
-
+            </div>
+            <div class="list">
+                <a href="projects/weatherAtHome/index.html"class="listItem">Wetter</a>
+                <a href="projects/Population Simulator/index.php" class="listItem">PopulationSim</a>
+            </div>
+        </div>
+        <div class="listBlock" id="socialMedia">
+            <div class="blockHeader">
+                <h4>Social Media</h4>
+            </div>
+            <div class="list">
+                <a class="listItem" href="www.facebook.de">Facebook</a>
+                <a class="listItem" href="www.twitter.de">Twitter</a>
+                <a class="listItem" href="www.isntagram.com">Instagram</a>
+                <a class="listItem" href="www.web.whatsapp.com">WhatsApp</a>
+            </div>
+        </div>
+        <div class="listBlock" id="reddit">
+            <div class="blockHeader">
+                
+            </div>
+        </div>
+        <div class="listBlock" id="media">
+            <div class="blockHeader">
+                
+            </div>
+        </div>
     </div>
 </body>
-
 </html>
